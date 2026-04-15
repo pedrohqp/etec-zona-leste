@@ -1,64 +1,95 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# 🏫 ETEC Zona Leste - Projeto Laravel CRUD
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Laravel](https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white)
+![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
+![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
+![Status](https://img.shields.io/badge/status-completo-success?style=for-the-badge)
 
-## About Laravel
+Este projeto é uma aplicação web completa inspirada no site institucional da **ETEC Zona Leste**. Desenvolvido com o framework **Laravel 8**, o sistema implementa operações de CRUD para a gestão de cursos e mensagens, servindo como um modelo prático de desenvolvimento para sistemas escolares.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 📂 Estrutura do Projeto
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+A arquitetura do projeto segue o padrão **MVC** (Model-View-Controller):
 
-## Learning Laravel
+```text
+etec-zona-leste/
+├── app/
+│   ├── Http/Controllers/   # Lógica: Controladores para Cursos, Contatos e Admin
+│   └── Models/             # Dados: Modelos para Cursos e Mensagens de Contato
+├── database/
+│   ├── migrations/         # Estrutura: Scripts de criação das tabelas
+│   └── database.sqlite     # Banco de Dados: Arquivo local de armazenamento
+├── resources/
+│   ├── views/              # Interface: Blade Templates (Páginas do site e painel)
+│   └── css/                # Estilo: CSS personalizado baseado na identidade ETEC
+├── routes/
+│   └── web.php             # Rotas: Definição de todos os endereços e permissões
+└── .env                    # Configurações: Variáveis de ambiente e banco de dados
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🚀 Funcionalidades
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 🌐 Área Pública (Portal Institucional)
+* *Página Inicial:* Banner principal e vitrine de cursos técnicos oferecidos.
+* *Sobre a Escola:* Seção detalhada sobre a história, infraestrutura e missão da unidade.
+* *Cursos:* Página com detalhes específicos sobre cada curso cadastrado.
+* *Contato:* Formulário funcional para envio de dúvidas com armazenamento automático no banco de dados.
 
-## Laravel Sponsors
+### 🔐 Área Administrativa (Painel de Gestão)
+* *Autenticação:* Sistema de login seguro com proteção de rotas para administradores.
+* *Dashboard:* Painel de controle com resumo estatístico de cursos e mensagens recebidas.
+* *CRUD de Cursos:* Gerenciamento total de cursos (Listar, Adicionar, Editar e Excluir).
+* *Gestão de Contatos:* Interface para visualização e controle das mensagens enviadas pelos usuários.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+---
 
-### Premium Partners
+## 🛠️ Tecnologias e Requisitos
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+* *Linguagem:* [PHP 8.1+](https://www.php.net/)
+* *Framework:* [Laravel 8.x](https://laravel.com/docs/8.x)
+* *Banco de Dados:* SQLite (nativo, sem necessidade de servidor externo)
+* *Gerenciador de Dependências:* [Composer](https://getcomposer.org/)
+* *Versionamento:* [Git](https://git-scm.com/)
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 📦 Guia de Instalação e Execução
 
-## Code of Conduct
+Siga rigorosamente os passos abaixo para configurar o projeto em sua máquina:
+### 1. Clonar o Repositório
+```bash
+git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+cd seu-repositorio
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+2. Instalação e Configuração
+Copie e cole o bloco de comandos de acordo com o seu sistema operacional para preparar o ambiente:
+Linux / macOS 🐧 🍎
 
-## Security Vulnerabilities
+composer install && \
+cp .env.example .env && \
+touch database/database.sqlite && \
+php artisan key:generate && \
+php artisan migrate --seed && \
+php artisan serve
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Windows (PowerShell) 🪟
+composer install; `
+copy .env.example .env; `
+ni database/database.sqlite; `
+php artisan key:generate; `
+php artisan migrate --seed; `
+php artisan serve
 
-## License
+Windows (Prompt de Comando - CMD) 🪟
+composer install && ^
+copy .env.example .env && ^
+type nul > database/database.sqlite && ^
+php artisan key:generate && ^
+php artisan migrate --seed && ^
+php artisan serve
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+3. Iniciar o Servidor
+Agora é só ligar o servidor local e acessar no navegador:
+Acesse: http://localhost:8000
+
