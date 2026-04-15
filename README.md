@@ -28,6 +28,7 @@ etec-zona-leste/
 │   └── web.php             # Rotas: Definição de todos os endereços e permissões
 └── .env                    # Configurações: Variáveis de ambiente e banco de dados
 
+```
 ## 🚀 Funcionalidades
 
 ### 🌐 Área Pública (Portal Institucional)
@@ -61,33 +62,41 @@ Siga rigorosamente os passos abaixo para configurar o projeto em sua máquina:
 ```bash
 git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
 cd seu-repositorio
-
+```
 2. Instalação e Configuração
 Copie e cole o bloco de comandos de acordo com o seu sistema operacional para preparar o ambiente:
 Linux / macOS 🐧 🍎
 
+```bash
 composer install && \
 cp .env.example .env && \
 touch database/database.sqlite && \
 php artisan key:generate && \
 php artisan migrate --seed && \
 php artisan serve
+```
 
 Windows (PowerShell) 🪟
+
+```bash
 composer install; `
 copy .env.example .env; `
 ni database/database.sqlite; `
 php artisan key:generate; `
 php artisan migrate --seed; `
 php artisan serve
+```
 
 Windows (Prompt de Comando - CMD) 🪟
+
+```bash
 composer install && ^
 copy .env.example .env && ^
 type nul > database/database.sqlite && ^
 php artisan key:generate && ^
 php artisan migrate --seed && ^
 php artisan serve
+```
 
 3. Iniciar o Servidor
 Agora é só ligar o servidor local e acessar no navegador:
